@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Генератор контрактов · Третий Горизонт</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="title">Генератор контрактов</div>
+  <div class="subtitle">Третий Горизонт · фронтир Ньоты · экипаж «Скарабея»</div>
+
+  <div class="filters" id="filters-panel">
+    <div class="filters-title">Фильтры</div>
+
+    <div class="filter-block">
+      <div class="filter-label">Тип контракта</div>
+      <div class="type-checks" id="type-checks"></div>
+      <div class="filter-actions">
+        <button type="button" class="mini-btn" id="btn-select-all">Все</button>
+        <button type="button" class="mini-btn" id="btn-select-none">Снять</button>
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-label">Расстояние, а.е.</div>
+      <div class="range-row">
+        <input type="number" id="dist-min" value="0.5" min="0.5" max="70" step="0.5">
+        <span>—</span>
+        <input type="number" id="dist-max" value="70" min="0.5" max="70" step="0.5">
+      </div>
+      <div class="range-hint">Допустимо: 0.5 – 70 а.е.</div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-label">Срок, дней</div>
+      <div class="range-row">
+        <input type="number" id="time-min" value="1" min="1" max="90" step="1">
+        <span>—</span>
+        <input type="number" id="time-max" value="90" min="1" max="90" step="1">
+      </div>
+      <div class="range-hint">Допустимо: 1 – 90 дней</div>
+    </div>
+  </div>
+
+  <button class="generate" id="btn-generate">Создать контракт</button>
+
+  <div class="contract" id="output">
+    <div class="empty">Настрой фильтры и нажми «Создать контракт»</div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/generator.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
